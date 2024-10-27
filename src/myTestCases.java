@@ -30,14 +30,13 @@ public class myTestCases {
 	
 	@BeforeTest 
 	public void setUp() {
-		//update
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		driver.get(WebSiteURL);
 		
 	}
 	
-	@Test (priority =1 , enabled = false)
+	@Test (priority =1 )
 	public void signUp() throws InterruptedException {
 		int RandomIndexForTheFirstNames = rand.nextInt(FirstNames.length);
 		int RandomIndexForTheLastNames = rand.nextInt(LastNames.length);
@@ -89,7 +88,7 @@ public class myTestCases {
 		
 	}
 	
-	@Test (priority =2 , enabled = false )
+	@Test (priority =2 )
 	public void logOut() throws InterruptedException {
 		Thread.sleep(3000);
 		WebElement UserNav = driver.findElement(By.id("customernav"));
@@ -102,7 +101,7 @@ public class myTestCases {
 //		driver.get(LogOutURL);
 
 }
-	@Test (priority =3 , enabled = false )
+	@Test (priority =3 )
 	public void logIn() throws InterruptedException {
 		System.out.println(GlobalUserName);
 		driver.findElement(By.partialLinkText("Login or register")).click();
